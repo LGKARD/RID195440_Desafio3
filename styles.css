@@ -1,0 +1,157 @@
+html {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: "Rubik", serif;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background: #F5F9Ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #11175E;
+}
+
+main {
+    width: 100%;
+    max-width: 40rem;
+    background: #ffffff;
+    border-radius: 1rem;
+    padding: 2rem;
+}
+
+#create-todo-section {
+    width: 100%;
+}
+
+#create-todo-form {
+    font-size: 1rem;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.todo-list-section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.todo-item {
+    display: flex;
+    align-items: center;
+    border-radius: 1rem;
+    margin: 0;
+    width: 100%;
+}
+
+.trash {
+    color: #b9b9b9;
+    width: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.trash i {
+    cursor: pointer;
+}
+
+.input-description {
+    height: 3rem;
+    width: 100%;
+    border: 1px solid #eeeeee;
+    font-size: 1rem;
+    border-radius: .5rem;
+    margin-right: 1rem;
+    outline: 0;
+    padding-left: 1.5rem;
+
+    &:focus {
+        border: 1px solid #b9b9b9;
+    }
+}
+
+.add-task-btn {
+    box-sizing: border-box;
+    height: 3rem;
+    width: 6rem;
+    color: #FFFFFF;
+    background: #2D70FD;
+    border: none;
+    border-radius: .2rem;
+    font-size: 1rem;
+    cursor: pointer;
+
+    &:hover {
+        opacity: .8;
+    }
+}
+
+.todo {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border: 1px solid #B1BACB;
+    border-radius: 1rem;
+    margin: 1rem;
+    padding: 1.5rem 2rem;
+    width: 100%;
+}
+
+.concluir-botao {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.concluir-task {
+    font-size: 1rem;
+    color: #FFFFFF;
+    background: #2D70FD;
+    border: none;
+    padding: .7rem 1.5rem;
+    border-radius: .2rem;
+    cursor: pointer;
+}
+
+
+.txt-task h3 {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #001747;
+}
+
+.p {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: #B1BACB;
+}
+
+.tag {
+    border: 1px solid #B1BACB;
+    font-size: .8rem;
+    padding: 0 .5rem;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.data {
+    font-size: .8rem;
+}
+
+.done h3 {
+    text-decoration: line-through;
+    color: #8F98A8
+}
