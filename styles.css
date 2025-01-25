@@ -140,7 +140,7 @@ main {
 .tag {
     border: 1px solid #B1BACB;
     font-size: .8rem;
-    padding: 0 .5rem;
+    padding: .1rem .5rem;
     border-radius: 1rem;
     display: flex;
     align-items: center;
@@ -154,4 +154,19 @@ main {
 .done h3 {
     text-decoration: line-through;
     color: #8F98A8
+}
+
+.done-button {
+    src: url(./assets/check.svg);
+}
+
+img {
+    cursor: pointer;
+}
+
+footer {
+    font-size: 1rem;
+    display: flex;
+    justify-content: flex-end;
+    color: #B1BACB;
 }

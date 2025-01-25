@@ -4,6 +4,8 @@ const todoInput = document.querySelector("#description");
 const todoTag = document.querySelector("#tag");
 const todoList = document.querySelector(".todo-list-section");
 
+let contadorTarefas = 0
+
 //funções
 const saveTodo = (task, tag) => {
     const todoListSection = document.createElement('div')
@@ -67,6 +69,7 @@ todoForm.addEventListener("submit", (event) => {
     if (inputValue && inputTag) {
         saveTodo(inputValue, inputTag);
 
+
         todoInput.value = '';
         todoTag.value = '';
     }
@@ -75,14 +78,38 @@ todoForm.addEventListener("submit", (event) => {
 document.addEventListener("click", (event) => {
     const targetEl = event.target;
     const parentEl = targetEl.closest(".todo-item");
-    const doneEl = targetEl.closest(".txt-task");
+    const concluir = targetEl.closest(".concluir-task");
+    const concluirBotao = targetEl.closest(".concluir-botao");
 
     if (targetEl.classList.contains("fa-trash")) {
+        if (parentEl.classList.contains("done")) {
+            contadorTarefas--;
+            document.getElementById("contador-tarefas").textContent = contadorTarefas;
+        }
         parentEl.remove();
+
     }
 
     if (targetEl.classList.contains("concluir-task")) {
-        doneEl.classList.toggle('done');
+        concluir.replaceWith(document.createElement("img"));
+        const img = parentEl.querySelector("img");
+        img.src = "assets/Checked.png";
+        img.alt = "Imagem de conclusão";
+        img.classList.add("checked");
+        parentEl.classList.toggle('done');
+        contadorTarefas++;
+        document.getElementById("contador-tarefas").textContent = contadorTarefas;
+    }
+
+    if (targetEl.classList.contains("checked")) {
+        const img = targetEl;
+        const concluirBotao = document.createElement("button");
+        concluirBotao.classList.add("concluir-task");
+        concluirBotao.textContent = "Concluir";
+        img.replaceWith(concluirBotao);
+        parentEl.classList.toggle('done');
+        contadorTarefas--;
+        document.getElementById("contador-tarefas").textContent = contadorTarefas;
     }
 });
 
