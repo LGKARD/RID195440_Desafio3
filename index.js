@@ -112,7 +112,3 @@ document.addEventListener("click", (event) => {
         document.getElementById("contador-tarefas").textContent = contadorTarefas;
     }
 });
-
-//txt-text h3
-
-

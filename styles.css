@@ -10,7 +10,7 @@ body {
     width: 100%;
     height: 100%;
     margin: 0;
-    background: #F5F9Ff;
+    background: #ffffff;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -24,6 +24,7 @@ h1 {
 main {
     width: 100%;
     max-width: 40rem;
+    max-height: 30rem;
     background: #ffffff;
     border-radius: 1rem;
     padding: 2rem;
@@ -169,4 +170,52 @@ footer {
     display: flex;
     justify-content: flex-end;
     color: #B1BACB;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    h3 {
+        margin: 0;
+    }
+
+    #create-todo-form {
+        flex-direction: column;
+    }
+
+    .input-description {
+        margin-bottom: 1rem;
+        padding-right: 1rem;
+
+    }
+
+    .add-task-btn {
+        width: 100%;
+    }
+
+    .todo {
+        grid-template-columns: 1fr;
+    }
+
+    .p {
+        flex-direction: column;
+    }
+
+    .tag {
+        width: 20%;
+        margin: 1rem 0 .5rem;
+    }
+
+    .data {
+        margin: 0 0 1rem;
+    }
+
+    .concluir-botao {
+        justify-content: center;
+    }
+
 }
